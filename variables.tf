@@ -5,8 +5,8 @@ variable "ami_id" {
 }
 
 variable "sg_ids" {
-    type=string
-    default="sg-0e431449e6b8a4604"
+    type= list(string)
+    default=["sg-0e431449e6b8a4604"]
 
 }
 
@@ -19,5 +19,8 @@ variable "instance_typer" {
     }
 }
 variable "tags" {
-    type = map
+    type = map(string)
+    default = {
+        terraform = "true"
+    }
 }
