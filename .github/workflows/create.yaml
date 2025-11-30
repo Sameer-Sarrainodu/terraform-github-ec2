@@ -13,9 +13,6 @@ jobs:
       - name: run init
         run: terraform init
 
-      - name: run plan
-        run: terraform plan
-
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
