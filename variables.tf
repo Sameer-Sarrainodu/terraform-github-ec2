@@ -1,12 +1,15 @@
 variable "ami_id" {
     type = string
     default = "ami-09c813fb71547fc4f"
-  
+
 }
+
 variable "sg_ids" {
-    type=list
-  
+    type=string
+    default="sg-0e431449e6b8a4604"
+
 }
+
 variable "instance_typer" {
     default="t2.micro"
     validation {
